@@ -1,3 +1,6 @@
+// Constants file for exporting to other js files
+
+// Accordion Component exported items list
 export const items = [
   {
     title: 'What is React?',
@@ -10,5 +13,17 @@ export const items = [
   {
     title: 'How do you use React',
     content: 'By creating components'
+  },
+  {
+    title: 'test',
+    content: 'test'
+  },
+  {
+    title: 'test',
+    content: 'test'
+  },
+  {
+    title: 'test',
+    content: 'test'
   },
 ]
