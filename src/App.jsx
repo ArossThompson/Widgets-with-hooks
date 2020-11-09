@@ -1,22 +1,14 @@
 import React from 'react';
+
+// Components
 import Accordion from './components/Accordion';
 import ColourInput from './components/ColourInput';
 import Counter from './components/Counter';
 
-const items = [
-  {
-    title: 'What is React?',
-    content: 'React is a front-end javascript framework'
-  },
-  {
-    title: 'Why use React',
-    content: 'Because it\'s great'
-  },
-  {
-    title: 'How do you use React',
-    content: 'By creating components'
-  },
-]
+// Utils
+import { items } from './utils/constants'
+
+
 
 const colour = "Green";
 

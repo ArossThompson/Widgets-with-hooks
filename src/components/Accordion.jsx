@@ -4,7 +4,6 @@ const Accordion = ({ items }) => {
   // hooks setup for setting title
   const [activeIndex, setActiveIndex] = useState(null);
   const [activeTitle, setActiveTitle] = useState(null);
-  console.log(activeIndex, activeTitle);
 
   // function that invokes the change of change of state for the active title using the setting function defined in the hook setup
   const onTitleClick = (index, title) => {
