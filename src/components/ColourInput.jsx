@@ -11,6 +11,7 @@ const ColourInput = () => {
   }
 
   return <div>
+    <h2 className="ui header">Colour selection input</h2>
     <div className="ui labeled input">
       <label className="ui label" htmlFor="colourInput">What is your favourite colour?</label>
       <input 
@@ -21,8 +22,10 @@ const ColourInput = () => {
       />
       
     </div>
-    
+
     <h3>My favourite colour is {activeColour}</h3>
+    
+    
   </div>
 }
 
