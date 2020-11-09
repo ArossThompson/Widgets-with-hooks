@@ -1,5 +1,6 @@
 import React from 'react';
 import Accordion from './components/Accordion';
+import ColourInput from './components/ColourInput';
 
 const items = [
   {
@@ -15,6 +16,8 @@ const items = [
     content: 'By creating components'
   },
 ]
+
+const colour = "Green";
 
 export default () => {
     return <div>
