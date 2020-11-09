@@ -1,6 +1,7 @@
 import React from 'react';
 import Accordion from './components/Accordion';
 import ColourInput from './components/ColourInput';
+import Counter from './components/Counter';
 
 const items = [
   {
@@ -24,5 +25,7 @@ export default () => {
       <Accordion
         items={items}
       />
+      <br/>
+      <Counter/>
     </div>;
 };
