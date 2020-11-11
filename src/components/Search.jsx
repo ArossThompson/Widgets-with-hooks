@@ -3,10 +3,13 @@ import axios from 'axios';
 
 const Search = () => {
   const [term, setTerm] = useState("");
+  const [results, setResults] = useState([]);
+
+  console.log(results);
 
   useEffect(() => {
     const search = async () => {
-      await axios.get('https://en.wikipedia.org/w/api.php', {
+      const { data } = await axios.get('https://en.wikipedia.org/w/api.php', {
         params: {
           action: 'query',
           list: 'search',
@@ -14,21 +17,42 @@ const Search = () => {
           format: 'json', 
           srsearch: term,
         }
-      })
+      });
+      setResults(data.query.search);
     }
-    search();
+
+    if (term) {
+      search();
+    }
   }, [term]);
  
+  const renderedResults = results.map((results) => {
+    return (
+      <div className="item">
+        <div className="content">
+          <div className="header">
+            {results.title}
+          </div>
+          {results.snippet}
+        </div>
+      </div>
+    )
+  })
+
   return <div>
     <div className="ui form">
       <div className="field">
         <label htmlFor="">Enter Search Term</label>
         <input 
           type="" 
+          value={term}
           className="input"
           onChange={(e) => {setTerm(e.target.value)}}
         />
       </div>
+    </div>
+    <div className="ui celled list">
+      {renderedResults}
     </div>
   </div>
 }
