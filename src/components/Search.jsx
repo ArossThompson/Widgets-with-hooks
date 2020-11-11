@@ -24,8 +24,10 @@ const Search = () => {
       search();
     } else {
       // Otherwise initiate timeout
-      const timeoutId = setTimeout(() => { 
-        search();
+      const timeoutId = setTimeout(() => {
+        if(term) {
+          search();
+        }
       }, 500)
 
       // useEffect Cleanup to ensure that timeout resets if the user changes Term value within 500ms - give them the chance to finish typing the term before a search happens.
