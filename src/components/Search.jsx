@@ -29,6 +29,9 @@ const Search = () => {
   const renderedResults = results.map((results) => {
     return (
       <div className="item" key={results.pageid}>
+        <div className="right floated conten">
+          <a href={`https://en.wikipedia.org?curid=${results.pageid}`} target="_blank" className="ui button">Go</a>
+        </div>
         <div className="content">
           <div className="header">
             {results.title}
