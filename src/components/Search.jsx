@@ -19,13 +19,17 @@ const Search = () => {
       setResults(data.query.search);
     }
 
+    // If there is a term but no results - initiate initial search
     if (term && !results.length) {
       search();
     } else {
+      // Otherwise initiate timeout
       const timeoutId = setTimeout(() => { 
         search();
       }, 500)
 
+      // useEffect Cleanup to ensure that timeout resets if the user changes Term value within 500ms - give them the chance to finish typing the term before a search happens.
+      // If 500ms passes, the search will happen.
       return () => {
         clearTimeout(timeoutId);
       }
