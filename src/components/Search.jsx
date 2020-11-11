@@ -28,12 +28,12 @@ const Search = () => {
  
   const renderedResults = results.map((results) => {
     return (
-      <div className="item">
+      <div className="item" key={results.pageid}>
         <div className="content">
           <div className="header">
             {results.title}
           </div>
-          {results.snippet}
+          <span dangerouslySetInnerHTML={{ __html: results.snippet }}></span>
         </div>
       </div>
     )
