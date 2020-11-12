@@ -27,3 +27,18 @@ export const items = [
     content: 'test'
   },
 ]
+
+export const options = [
+  {
+    label: "The colour Red",
+    value: "Red"
+  },
+  {
+    label: "The colour Green",
+    value: "Green"
+  },
+  {
+    label: "The colour Blue",
+    value: "Blue"
+  },
+]
