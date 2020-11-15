@@ -20,9 +20,7 @@ const Convert = ({ text, language }) => {
     }
 
     const conversionTimeout = setTimeout(() => {
-      if(text && language) {
-        convert();
-      }
+      convert();
     }, 1000)
 
     return () => {
@@ -32,7 +30,7 @@ const Convert = ({ text, language }) => {
 
   }, [text, language])
 
-  return <div>{conversion}</div>
+  return <h1 className="ui header">{conversion}</h1>
 
 }
 
