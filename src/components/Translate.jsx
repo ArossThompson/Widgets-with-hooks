@@ -3,6 +3,7 @@ import Dropdown from './Dropdown';
 
 // Utils
 import { languages } from '../utils/constants'
+import Convert from './Convert';
 
 const Translate = () => {
   const [language, setLanguage] = useState(languages[0]);
@@ -22,6 +23,11 @@ const Translate = () => {
           options={languages}
           selected={language}
           onSelectedChange={setLanguage}
+        />
+
+        <Convert 
+          text={text}
+          language={language.value}
         />
       </div>
     )
