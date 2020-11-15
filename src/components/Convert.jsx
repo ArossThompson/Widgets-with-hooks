@@ -6,7 +6,7 @@ const Convert = ({ text, language }) => {
 
   useEffect(() => {
     const convert = async () => {
-      const { data } = await axios.get('https://translation.googleapis.com/language/translate/v2', {
+      const { data } = await axios.post('https://translation.googleapis.com/language/translate/v2', {}, {
         params: {
           "key": "AIzaSyCHUCmpR7cT_yDFHC98CZJy2LTms-IwDlM",
           "q": text,
