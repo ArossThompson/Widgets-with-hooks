@@ -19,8 +19,14 @@ const Convert = ({ text, language }) => {
       setConversion(data.data.translations[0].translatedText);
     }
 
-    if(text && language) {
-      convert();
+    const conversionTimeout = setTimeout(() => {
+      if(text && language) {
+        convert();
+      }
+    }, 1000)
+
+    return () => {
+      clearTimeout(conversionTimeout);
     }
     
 
